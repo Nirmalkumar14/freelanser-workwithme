@@ -32,6 +32,9 @@ nav ul li{
    
 
 }
+.l{
+    cursor: pointer;
+}
 nav ul li a{
  text-decoration: none;
  color: black;
