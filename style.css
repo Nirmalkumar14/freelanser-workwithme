@@ -15,7 +15,7 @@ nav{
     justify-content: space-between;
     padding: 15px 10%;
     border-bottom: 1px solid #000;
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 
@@ -45,6 +45,10 @@ nav.logo{
     cursor: pointer;
 
 }
+
+.logo{
+    width: 20%;
+}
 .nav-btn{
        background: #000;
        color: #fff;
@@ -61,19 +65,31 @@ nav.logo{
     margin-left: 8px;
 }
 
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+}
+
 .Header{
       width: 100%;
       min-height: 100vh;
-      background:linear-gradient(#eefff9 0%, #ffccc1 49%,#dcdbff 100%);
+      /* background:linear-gradient(#eefff9 0%, #ffccc1 49%,#dcdbff 100%); */
       padding: 0 10%;
       display: flex;
       justify-content: center;
       flex-direction: column;
+      /* background-color: rgba(0,0,0,0.4); */
 }
 .Header h1{
     margin-top: 100px;
     font-size: 13vw;
     line-height: 11vw;
+}
+.header1{
+    color: #fff;
 }
 .btn-container{
     margin: 20px 0;
@@ -90,9 +106,11 @@ nav.logo{
 }
 .call{
     background: #000;
+    /* background: transparent; */
     color: #fff;
     padding: 10px 10px 10px 30px;
     border-radius: 40px;
+   
 }
 .call img{
       width:40px ;
@@ -130,7 +148,9 @@ nav.logo{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip:text;
     background-size: 0%;
+    
 }
+
 .Header h1 span:first-child{
     animation: textcolor1 2s linear infinite alternate;
 }
@@ -143,7 +163,7 @@ nav.logo{
         background-size: 0%;
     }
     40%{
-        background-size: 100%;
+        background-size: 70%;
     }
     100%{
         background-size: 100%;
@@ -155,7 +175,7 @@ nav.logo{
         background-size: 0%;
     }
     40%{
-        background-size: 0%;
+        background-size: 70%;
     }
     100%{
         background-size: 100%;
@@ -171,7 +191,7 @@ nav.logo{
 
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
     nav ul{
         position: absolute;
         width: 100%;
@@ -209,18 +229,18 @@ nav.logo{
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
     .Header{
         min-height: auto;
         padding: 0;
-  
+        
     }
     .user{
         width: 100%;
         right: auto;
         position: relative;
         margin-top: 100px;
-
+        z-index: 0.2;
     }
     .header{
         position: absolute;
@@ -228,7 +248,7 @@ nav.logo{
         padding: 0 10%;
         z-index: 2;
         padding-bottom: 40px;
-        background: linear-gradient(transparent,#fff);
+        /* background: linear-gradient(transparent,#fff); */
     }
     .btn-container{
         margin: 5px 0;
@@ -255,5 +275,20 @@ nav.logo{
         font-size: 70px;
         line-height: 60px;
         margin-bottom: 20px;
+    }
+}
+
+@media (min-aspect-ratio:16/9){
+    .background-clip{
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+@media (max-aspect-ratio:16/9){
+    .background-clip{
+        width: auto;
+        height: 100%;
     }
 }
