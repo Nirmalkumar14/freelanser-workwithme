@@ -18,7 +18,9 @@ nav{
     z-index: 10;
 }
 
-
+.can1{
+    transition: 0.5s;
+}
 
 nav ul li{
     list-style: none;
@@ -143,7 +145,8 @@ nav.logo{
 }
 
 .Header h1 span{
-    background: linear-gradient(#000,#000);
+    background: linear-gradient(#fff,#fff);
+    /* background: #fff; */
     background-repeat: no-repeat;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip:text;
