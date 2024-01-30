@@ -13,7 +13,7 @@ search.addEventListener("keyup",function(){
         productlist[count].style.display="none"
     }
     else
-    {
+        {
            productlist[count].style.display="block"
 
        }
